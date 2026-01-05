@@ -1,7 +1,7 @@
 import numpy as np
-def stat (data):
+def stat ():
     #importing data
-    data = np.loadtxt ("populations.txt", skiprowns = 1)
+    data = np.loadtxt ("populations.txt", skiprows = 1)
     
     #Createing hare
     hare = data[:,1]
@@ -9,7 +9,7 @@ def stat (data):
     #Finding the min year of hare with np.argmin
     min_hare_index = np.argmin(hare)
     
-    min_year_hare = data(min_hare_index, 0)
+    min_year_hare = data[min_hare_index, 0]
     
     lynx_avg = np.mean(data[:, 2])
     
